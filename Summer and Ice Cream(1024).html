@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Summer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font: normal 100% Helvetica, Arial, sans-serif;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-family: 'Poiret One', cursive;
+      color:blue;
+
+      font-size: 50px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+       background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #nav{
+        width:100%;
+        height:60px;
+        background-color:#40e0d0;
+    }
+    #nav ul{
+        list-style: none;
+    }
+    #nav li{
+         float:right;
+         width:150px;
+         line-height: 60px;
+         text-align: center;
+         list-style: none;
+
+    }
+    a.mainlink:link{
+         text-decoration: none;
+         color:#fff;
+         font-size: 1.25em;
+            }
+    a.mainlink:hover{
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+              }
+    #nav li:hover{
+        background: #ffc107;
+              }
+    #main{
+         width:100%;
+         height:90%;
+         margin-bottom: 7%;
+    } 
+    #main1{
+         width:100%;
+         height:46%;
+         text-align: center;
+    }
+    #main2{
+         width:100%;
+         height:46%;
+         text-align: center;
+    }
+    .mainn{
+        width:24%;
+        height:90%;
+        margin-top:4%;
+        margin-left: 7%;
+        float:left;
+        position:relative;
+        border:5px inset silver;
+    }
+    #ain{
+        width:100%;
+        height:8%;
+        text-align: center;
+        margin:0 auto;
+        font-size: 1.875em;
+        font-family: 'Poiret One', cursive ;
+    }
+    .mainn img{
+      width:100%;
+      height:100%;
+    }
+
+    #a1 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a1 #f1{
+        transform-origin: left bottom;
+    }
+    #a1 #g1{
+        float:left;
+        transform-origin:right top;
+        transform:scale(0);
+    }
+    #a1:hover #f1{
+        transform:scale(0);
+    }
+    #a1:hover #g1{
+        transform:scale(1);
+    } 
+
+      #a2 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a2 #f2{
+        transform-origin: left bottom;
+    }
+    #a2 #g2{
+        float:left;
+        transform-origin:right top;
+        transform:scale(0);
+    }
+    #a2:hover #f2{
+        transform:scale(0);
+    }
+    #a2:hover #g2{
+        transform:scale(1);
+    } 
+ 
+    #a3 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a3 #f3{
+        transform-origin: left top;
+    }
+    #a3 #g3{
+        float:left;
+        transform-origin:right bottom;
+        transform:scale(0);
+    }
+    #a3:hover #f3{
+        transform:scale(0);
+    }
+    #a3:hover #g3{
+        transform:scale(1);
+    }
+
+     #a4 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a4 #f4{
+        transform-origin: left top;
+    }
+    #a4 #g4{
+        float:left;
+        transform-origin:right bottom;
+        transform:scale(0);
+    }
+    #a4:hover #f4{
+        transform:scale(0);
+    }
+    #a4:hover #g4{
+        transform:scale(1);
+    }
+
+    #a5 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a5 #f5{
+        transform-origin: left top;
+    }
+    #a5 #g5{
+        float:left;
+        transform-origin:right bottom;
+        transform:scale(0);
+    }
+    #a5:hover #f5{
+        transform:scale(0);
+    }
+    #a5:hover #g5{
+        transform:scale(1);
+    } 
+
+    #a6 img{
+        position:absolute;
+        top: 0px;
+        left:0px;
+        transition: transform 2s ease;
+    }
+    #a6 #f6{
+        transform-origin: left bottom;
+    }
+    #a6 #g6{
+        float:left;
+        transform-origin:right top;
+        transform:scale(0);
+    }
+    #a6:hover #f6{
+        transform:scale(0);
+    }
+    #a6:hover #g6{
+        transform:scale(1);
+    }
+    #cur{
+        width:100%;
+        height:97%;
+        margin-bottom: 5%;
+    } 
+    #ur{
+        width:100%;
+        height:10%;
+        text-align: center;
+        margin:0 auto;
+        font-size: 1.875em;
+        font-family: 'Poiret One', cursive ;
+        margin-bottom: 2%;
+    }
+    #cur1,#cur2{
+        width:100%;
+        height:44%;
+    }
+    #b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8{
+          width:25%;
+          height:100%;
+          float:left;
+    } 
+    #b1,#b3,#b6,#b8{
+        background-color:#40e0d0;
+    }
+    .cu{
+         background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+    }
+    .txtstart{
+        display:none;
+    }
+    .txtChange{
+        display:block;
+        font-weight:bold;
+        text-align: center;
+        margin-top: 6%;
+        font-size: 1.25em;
+        color:#000079;
+    }
+    #mus{
+        width:100%;
+        height:45%;
+       /* background-image: url(images/1.jpg);
+        background-size: cover;*/
+        margin-bottom: 50px;
+    }
+    #mu{
+        width:100%;
+        height:20%;
+        text-align: center;
+        margin:0 auto;
+        font-size: 1.875em;
+        font-family: 'Poiret One', cursive ;
+    }
+    #mus1,#mus2{
+        width:100%;
+        height:40%;
+        text-align: center;
+        background-color:#40e0d0;
+    }
+    .i1{
+         width:26%;
+         height:80%;
+         float:left;
+         margin-top: 1.5%;
+         margin-left: 5%;
+         text-align: center;
+         font-size: 1.5625em;
+         border:2px solid #40e0d0;
+         background-color:#ffc107;
+    }
+    #bottom{
+      width:100%;
+      height:70px;
+      background-color:#ffc107;
+      text-align: center;
+      font-size: 1.2em;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(images/d1.jpg)">炎热的盛夏</div>
+      <div class="swiper-slide" style="background-image:url(images/d2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/d3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/d4.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/d5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/d6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/d7.jpg)"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div id="nav">
+      
+            <li><a href="liuyan.html"class="mainlink" >分享留言</a></li>
+            <li><a href="#mus"class="mainlink">一些音乐</a></li>
+            <li><a href="#cur"class="mainlink">夏天的诗</a></li>
+            <li><a href="#main"class="mainlink">冰淇淋</a></li>
+        
+  </div>
+  <div id="main"> 
+  <div id="ain">
+        <h2>各种各样的冰淇淋</h2>
+  </div>
+      <div id="main1">
+          <div id="a1" class="mainn"><img id="f1" src="images/f1.jpeg" alt="" />
+          <img id="g1" src="images/g1.jpg" alt="" />
+          </div>
+          <div id="a2" class="mainn"><img id="f2" src="images/f2.jpeg" alt="" />
+          <img id="g2" src="images/g2.jpg" alt="" />
+          </div>
+          <div id="a3" class="mainn"><img id="f3" src="images/f3.jpeg" alt="" />
+          <img id="g3" src="images/g3.jpg" alt="" />
+          </div>
+          
+      </div>
+      <div id="main2">
+          <div id="a4" class="mainn"><img id="f4" src="images/f4.jpg" alt="" />
+          <img id="g4" src="images/g4.jpg" alt="" />
+          </div>
+          <div id="a5" class="mainn"><img id="f5" src="images/f5.jpg" alt="" />
+          <img id="g5" src="images/g5.jpg" alt="" />
+          </div>
+          <div id="a6" class="mainn"><img id="f6" src="images/f6.jpg" alt="" />
+          <img id="g6" src="images/g6.jpg" alt="" />
+          </div>
+      </div>
+      </div>
+
+      <div id="cur">
+          <div id="ur">
+              <h2> 有关夏天的诗</h2>
+          </div>
+          <div id="cur1">
+              <div id="b1">
+                  <div id="txt1" class="txtstart">
+                      <p>除了夏天</p>
+                      <p>我还能在哪里等待</p>
+                      <p>希望如愿</p>
+                      <p>绿意正在蔓延</p>
+                      <p>几串饱满的思绪</p>
+                      <p>向高处攀登</p>
+                      <p>希望</p>
+                      <p>你来采摘</p>
+                  </div>
+              </div>
+              <div id="b2" class="cu" style="background-image:url(images/i1.jpg)"></div>
+              <div id="b3">
+              <div id="txt2" class="txtstart">
+                      <p>不知怎么的</p>
+                      <p>阴暗晦涩伴随了我一整个春季</p>
+                      <p>我郁郁，对春暖花开都提不起兴趣</p>
+                      <p>未曾想一个夏季</p>
+                      <p>我蓦然间邂逅你</p>
+                      <p>自此，你愉悦了我每一刻的回忆</p>
+                      <p>如同烈日后</p>
+                      <p>一场凉意喜人的雨</p>
+                  </div>
+              </div>
+              <div id="b4" class="cu" style="background-image:url(images/i2.jpg)"></div>
+          </div>
+          <div id="cur2">
+              <div id="b5" class="cu" style="background-image:url(images/i3.jpg)"></div>
+              <div id="b6">
+                  <div id="txt3" class="txtstart">
+                      <p>从一抹嫩绿的轻柔开始</p>
+                      <p>梦便用心倾听大自然的呢喃</p>
+                      <p>缤纷的花语拨动生命之弦</p>
+                      <p>在季节的画布上翩然而舞</p>
+                      <p>风略带情窦初开的羞赧</p>
+                      <p>牵着阳光的手在树梢漫步</p>
+                      <p>低吟信使灿烂的诗笺</p>
+                      <p>每个字都饱含着绵绵情意</p>
+                  </div>
+              </div>
+              <div id="b7" class="cu" style="background-image:url(images/i4.jpg)"></div>
+              <div id="b8">
+                   <div id="txt4" class="txtstart">
+                      <p>看天空的彩虹</p>
+                      <p>来自大雨的朦胧</p>
+                      <p>绚烂的蝶出自昆虫</p>
+                      <p>毫不起眼的蛹</p>
+                      <p>等待并不算苦痛</p>
+                      <p>那是爱你的光荣</p>
+                      <p>一无所有也不贫穷</p>
+                      <p>因为我拥有你笑容</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="mus">
+      <div id="mu">
+          <h2>有关夏天的歌曲</h2>
+      </div>
+       <div id="mus1">
+           <div class="i1">
+           <p>他夏了夏天 - 苏打绿</p>
+                <audio controls>
+                  <source src="mus/141220他夏了夏天.mp3" />
+              </audio>
+           </div>
+           <div class="i1">
+           <p>早班火车 - Beyond</p>
+                    <audio controls>
+                  <source src="mus/Beyond - 早班火车.mp3" />
+              </audio>
+           </div>
+           <div class="i1">
+           <p>wind - Akeboshi</p>
+                    <audio controls>
+                  <source src="mus/Akeboshi - wind(ワインド).mp3"/>
+              </audio>
+           </div>
+       </div>
+       <div id="mus2">
+           <div class="i1">
+               <p>七月上 - Jam</p>
+                    <audio controls>
+                  <source src="mus/Jam - 七月上.mp3"/>
+              </audio>
+           </div>
+           <div class="i1">
+               <p>夏夕空 - 中孝介</p>
+                    <audio controls>
+                  <source src="mus/中孝介 - 夏夕空.mp3"/>
+              </audio>
+           </div>
+           <div class="i1">
+               <p>Dear - まらしぃ</p>
+                    <audio controls>
+                  <source src="mus/まらしぃ - Dear.mp3"/>
+              </audio>
+           </div>
+       </div>
+      </div>
+      <div id="bottom">
+        <p>Copyright:Hzh 16240458</p>
+        <p>email:513554676@qq.com</p>
+      </div>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    var eldian1=document.getElementById("b2");
+    var eltxt1=document.getElementById("txt1");
+    eldian1.onmouseover=function(){
+        eltxt1.className="txtChange";
+    }
+    eldian1.onmouseout=function(){
+        eltxt1.className="txtstart";
+    }
+    var eldian2=document.getElementById("b4");
+    var eltxt2=document.getElementById("txt2");
+    eldian2.onmouseover=function(){
+        eltxt2.className="txtChange";
+    }
+    eldian2.onmouseout=function(){
+        eltxt2.className="txtstart";
+    }
+    var eldian3=document.getElementById("b5");
+    var eltxt3=document.getElementById("txt3");
+    eldian3.onmouseover=function(){
+        eltxt3.className="txtChange";
+    }
+    eldian3.onmouseout=function(){
+        eltxt3.className="txtstart";
+    }
+    var eldian4=document.getElementById("b7");
+    var eltxt4=document.getElementById("txt4");
+    eldian4.onmouseover=function(){
+        eltxt4.className="txtChange";
+    }
+    eldian4.onmouseout=function(){
+        eltxt4.className="txtstart";
+    }
+  </script>
+</body>
+</html>
